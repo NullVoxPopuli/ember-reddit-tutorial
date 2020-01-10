@@ -1,0 +1,51 @@
+name: CI
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  lint_js:
+    name: "Lint JS/TS"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: rwjblue/setup-volta@v1
+    - name: Install
+      run: yarn install
+    - name: "Lint JS/TS"
+      run: yarn lint:js
+
+  lint_templates:
+    name: "Lint Templates"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: rwjblue/setup-volta@v1
+    - name: Install
+      run: yarn install
+    - name: Lint Templates
+      run: yarn lint:hbs
+
+  tests:
+    name: Tests
+    strategy:
+      matrix:
+        ci_browser: [Chrome, Firefox]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: rwjblue/setup-volta@v1
+    - name: Install
+      run: yarn install
+    - name: Test
+      env:
+        CI_BROWSER: ${{ matrix.ci_browser }}
+      run: yarn test
