@@ -1,0 +1,13 @@
+<ul>
+  {{#each @items as |item|}}
+    <li>
+      <MDNLink @url={{item.url}}>
+        {{item.title}}
+      </MDNLink>
+
+      {{#if item.subpages}}
+        <SearchLinks::Results @items={{item.subpages}} />
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
