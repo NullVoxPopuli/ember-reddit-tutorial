@@ -1,0 +1,31 @@
+<div local-class='post'>
+  <div>
+    {{@post.votes}}
+  </div>
+  <div local-class='content'>
+    <img alt='preview' />
+    <div>
+      <LinkTo @route='subreddit.post' @models={{array @post.subreddit.id @post.id}}>
+        <strong>
+          {{@post.title}}
+        </strong>
+      </LinkTo>
+
+      <br>
+
+      <em>
+        to
+        <LinkTo @route='subreddit' @model={{@post.subreddit.id}}>
+          {{@post.subreddit.name}}
+        </LinkTo>
+        by
+        <LinkTo @route='user' @model={{@post.author.id}}>
+          {{@post.author.name}}
+        </LinkTo>
+      </em>
+      <footer>
+        comments | save | hide
+      </footer>
+    </div>
+  </div>
+</div>

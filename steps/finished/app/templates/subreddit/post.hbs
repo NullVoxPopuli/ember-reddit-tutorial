@@ -1,0 +1,8 @@
+<h1>{{@model.post.title}}</h1>
+<em>
+  by
+  <LinkTo @route='user' @model={{@model.author.id}}>
+    {{@model.author.name}}
+  </LinkTo>
+</em>
+<p>{{@model.post.text}}</p>

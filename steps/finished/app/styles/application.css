@@ -1,0 +1,7 @@
+/* Styles for the application route */
+
+.main-content {
+  padding-top: calc(var(--top-bar-height) + var(--grid-gap));
+  padding-left: var(--grid-gap);
+  padding-right: var(--grid-gap);
+}

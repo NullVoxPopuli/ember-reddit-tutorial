@@ -1,0 +1,11 @@
+.post, .content {
+  composes: grid from 'mdn-learning/styles/utils';
+
+  grid-template-columns: auto 1fr;
+}
+
+.post {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: calc(var(--grid-gap) / 2);
+}

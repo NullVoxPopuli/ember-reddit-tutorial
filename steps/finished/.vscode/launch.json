@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+      {
+        // Run this _without_ debugging.
+        // To run _with_ debugging is to debug the build process itself.
+        // Debugging of our app happens in-browser.
+        "type": "node",
+        "request": "launch",
+        "name": "yarn start",
+        "cwd": "${workspaceRoot}",
+        "runtimeExecutable": "yarn",
+        "runtimeArgs": [
+          "start"
+        ],
+        "stopOnEntry": false
+      },
+    ]
+}

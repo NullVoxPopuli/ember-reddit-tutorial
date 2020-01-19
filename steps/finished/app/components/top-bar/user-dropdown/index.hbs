@@ -1,0 +1,28 @@
+<div class='dropdown dropdown-left {{if this.isOpen "active"}}'>
+  <button
+    local-class='trigger'
+    {{on 'click' this.toggle}}
+  >
+    <small>
+      username<br>
+      0 karma
+    </small>
+  </button>
+
+  <div class='dropdown-menu'>
+    <input placeholder='Filter' />
+
+    <panel>
+      <legend>My Stuff</legend>
+
+      <LinkTo @route='user' @model='me'>My Profile</LinkTo>
+    </panel>
+
+    <panel>
+      <legend>More Stuff</legend>
+
+      <a href='#'>Help</a>
+      <a href='#'>Log Out</a>
+    </panel>
+  </div>
+</div>

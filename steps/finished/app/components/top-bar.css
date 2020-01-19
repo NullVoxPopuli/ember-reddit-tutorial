@@ -1,0 +1,20 @@
+.top-bar {
+  composes: grid from 'mdn-learning/styles/utils';
+
+  grid-template-columns: auto auto 1fr auto;
+
+  padding: 0 var(--grid-gap);
+  align-items: center;
+  justify-content: space-between;
+
+
+  width: 100vw;
+  position: fixed;
+  height: var(--top-bar-height);
+  border-bottom: 1px solid var(--header-border-color);
+  background: var(--background);
+}
+
+.search {
+
+}

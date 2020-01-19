@@ -1,0 +1,13 @@
+:root {
+  --background: white;
+  --grid-gap: 0.75rem;
+  --top-bar-height: 48px;
+
+  --body-bg-color: "#878abc";
+  --border-color: #eeeeee;
+  --header-border-color: #eeeeee;
+}
+
+body {
+  background: var(--body-bg-color);
+}
