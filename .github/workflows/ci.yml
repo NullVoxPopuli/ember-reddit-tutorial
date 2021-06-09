@@ -12,7 +12,7 @@ jobs:
     timeout-minutes: 5
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - uses: rwjblue/setup-volta@v1
     - name: Install
       run: cd steps/finished && yarn install
@@ -25,7 +25,7 @@ jobs:
     timeout-minutes: 5
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - uses: rwjblue/setup-volta@v1
     - name: Install
       run: cd steps/finished && yarn install
@@ -41,7 +41,7 @@ jobs:
     timeout-minutes: 15
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - uses: rwjblue/setup-volta@v1
     - name: Install
       run: cd steps/finished && yarn install
